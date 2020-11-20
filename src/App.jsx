@@ -10,6 +10,15 @@ function App() {
   }
   const fetchMovies = async (query) => {
     alert(query)
+
+    let response = await fetch(
+      `http://www.omdbapi.com/?t=${query}&apikey=a0871843&`,
+      {
+        method: "GET",
+      }
+    )
+    let result = await response.json()
+    console.log(result)
   }
   const onKeyDown = (e) => {
     // when someone pressed any button

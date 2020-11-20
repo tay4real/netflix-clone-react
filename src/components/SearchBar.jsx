@@ -22,7 +22,7 @@ class SearchBar extends React.Component {
           onChange={this.props.onChange}
           className="mr-sm-2"
         />
-        <Button variant="outline-danger"></Button>
+        <Button variant="outline-danger">Search</Button>
       </Form>
     )
   }
