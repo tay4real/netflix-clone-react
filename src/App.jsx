@@ -1,12 +1,14 @@
 
 import './App.css';
-import Header from './components/header';
-import NetflixNavBar from './components/navbar';
+import CommentList from './components/CommentList';
+import Header from './components/Header';
+import NetflixNavBar from './components/Navbar';
 
 function App() {
   return (
     <> <NetflixNavBar />
       <Header />
+      <CommentList />
     </>
   );
 }

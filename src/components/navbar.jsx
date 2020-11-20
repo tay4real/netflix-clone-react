@@ -1,6 +1,6 @@
 import React from "react"
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Bootstrap from "react-bootstrap"
+
 import "../netflix.css"
 import Logo from "../assets/netflix-logo-png-2562.png"
 
@@ -15,7 +15,7 @@ class NetflixNavBar extends React.Component {
                     <svg width="1.8vw"
                         height="3vh" viewBox="0 0 16 16" className="bi bi-list" fill="currentColor"
                         xmlns="http://www.w3.org/2000/svg">
-                        <path fill-rule="evenodd"
+                        <path fillRule="evenodd"
                             d="M2.5 11.5A.5.5 0 0 1 3 11h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4A.5.5 0 0 1 3 7h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4A.5.5 0 0 1 3 3h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z" />
                     </svg><span className="badge badge-danger badge-pill d-flex justify-content-center"
                         style={{ position: " absolute", top: 2.5 + "vh", fontSize: .6 + "vw", marginLeft: 1.3 + "vw" }}>1</span>
