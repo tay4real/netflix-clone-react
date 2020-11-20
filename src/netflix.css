@@ -1,0 +1,154 @@
+@font-face {
+    font-family: "Netflix";
+    src: url(./assets/fonts/Netflix\ Sans\ Light.otf) format("opentype");
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "NetflixBold";
+    src: url(./assets/fonts/Netflix\ Sans\ Bold.otf) format("opentype");
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: "NetflixMedium";
+    src: url(./assets/fonts/Netflix\ Sans\ Medium.otf) format("opentype");
+    font-weight: medium;
+}
+
+body {
+    background-color: black;
+    color: white;
+
+
+}
+
+.text-light {
+    color: white
+}
+
+.badge-pill {
+    border-radius: 50%;
+    width: 1vw;
+    height: 1vw;
+    padding: .2vw;
+}
+
+.btn-netflix {
+    padding: .5vw;
+    position: absolute;
+    background-color: rgb(255, 255, 255, .1);
+    color: white;
+    width: 10vw;
+    height: 2.3vw;
+    font-weight: bolder;
+}
+
+.btn-netflix:hover {
+    background-color: white;
+    color: black
+}
+
+.description {
+
+    font-size: 15pt;
+    letter-spacing: .55px;
+    line-height: 99.6%;
+}
+
+.watchNow {
+    font-size: 20pt;
+    font-weight: bold;
+    letter-spacing: .55px;
+    line-height: 99%;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    width: 3vw;
+    background: black
+}
+
+.carousel {
+    width: 99vw;
+    left: 0vw
+}
+
+.carousel-inner>.carousel-item {
+    padding-left: 1.3vw
+}
+
+.carouselPoster {
+    max-width: 15.3vw;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: clip;
+    border-radius: .5vw;
+    padding: .5vw
+}
+
+.carousel-item:not(:first-of-type) img {
+
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: clip;
+    border-radius: .3vw;
+    transform: translate(-14vw) !important;
+}
+
+.carousel-inner>div {
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: clip;
+}
+
+.carousel-inner .row {
+    width: 131%;
+    height: 190px !important;
+    overflow: hidden;
+    padding-left: 2.6vw;
+}
+
+.carousel-inner .row .col {
+    width: 15.3vw !important;
+    height: 190px !important;
+    object-fit: cover;
+    background: url(https://placehold.it/340x160);
+    background-repeat: no-repeat;
+    background-position-x: center;
+    margin: 0.15vw;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: clip;
+    border-radius: .3vw;
+}
+
+.rt {
+    font-size: 1.1vw;
+
+}
+
+.rating {
+    background-color: rgba(66, 65, 65, 0.7);
+    width: 6vw;
+    height: 5vh;
+    border-left-style: solid;
+    border-left-width: 3px;
+    border-color: white;
+    padding: 0.5vw;
+    z-index: 1
+}
+
+.repeatbutton {
+    width: 2.2vw;
+    height: 2.2vw;
+    border-radius: 50%;
+    border-style: solid;
+    border-width: 1px;
+    border-color: white;
+}
+
+.btn-group {
+    top: -.5vw;
+}
