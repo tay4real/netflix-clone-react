@@ -10,8 +10,7 @@ import CommentList from "./CommentList"
 
 const Header = () => {
     const [lgShow, setLgShow] = useState(false);
-    const [show, setShow] = useState(false);
-    const handleShow = () => setShow(true)
+
     return (
 
 
@@ -44,7 +43,7 @@ const Header = () => {
                     <Modal
                         size="xl"
                         show={lgShow}
-                        onHide={() => setLgShow(false)}
+
                         aria-labelledby="example-modal-sizes-title-lg"
 
                     >
