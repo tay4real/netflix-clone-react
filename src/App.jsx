@@ -1,16 +1,17 @@
-
-import './App.css';
-import CommentList from './components/CommentList';
-import Header from './components/Header';
-import NetflixNavBar from './components/Navbar';
+import "./App.css"
+import CommentList from "./components/CommentList"
+import Header from "./components/Header"
+import NetflixNavBar from "./components/Navbar"
 
 function App() {
   return (
-    <> <NetflixNavBar />
+    <>
+      {" "}
+      <NetflixNavBar />
       <Header />
       <CommentList />
     </>
-  );
+  )
 }
 
-export default App;
+export default App
