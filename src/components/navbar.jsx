@@ -9,7 +9,7 @@ import { Navbar, Button, Form, FormControl } from "react-bootstrap" //why do I n
 class NetflixNavBar extends React.Component {
     render() {
         return (
-            <Navbar expand="lg" text="light" className="justify-content-between text-light" style={{ backgroundColor: "transparent", zIndex: "4" }}>
+            <Navbar expand="lg" text="light" className="justify-content-between text-light" style={{ backgroundColor: "transparent", zIndex: "4", position: "sticky", top: 0 }}>
 
                 <div className="d-flex" style={{ margin: 1 + "vw" }}>
                     <svg width="1.8vw"
