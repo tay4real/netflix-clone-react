@@ -9,17 +9,27 @@ function App() {
     console.log(e.target.value)
   }
   const fetchMovies = async (query) => {
-    alert(query)
-
-    let response = await fetch(
-      `http://www.omdbapi.com/?t=${query}&apikey=a0871843&`,
-      {
-        method: "GET",
+    try {
+      let response = await fetch(
+        `http://www.omdbapi.com/?t=${query}&apikey=a0871843&`,
+        {
+          method: "GET",
+        }
+      )
+      let result = await response.json()
+      console.log(result)
+      if (result.ok) {
+        //present results
+      } else {
+        alert("movie not found")
+        let error = await response.json()
+        console.log(error)
       }
-    )
-    let result = await response.json()
-    console.log(result)
+    } catch (e) {
+      console.log(e)
+    }
   }
+
   const onKeyDown = (e) => {
     // when someone pressed any button
     if (e.key === "Enter") {
