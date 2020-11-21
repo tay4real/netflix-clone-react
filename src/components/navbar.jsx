@@ -3,6 +3,7 @@ import "bootstrap/dist/css/bootstrap.min.css"
 
 import "../netflix.css"
 import Logo from "../assets/netflix-logo-png-2562.png"
+import SearchBar from "./SearchBar"
 
 import { Navbar, Button, Form, FormControl } from "react-bootstrap" //why do I need to import all of them?
 
@@ -77,10 +78,10 @@ class NetflixNavBar extends React.Component {
               d="M6.5 12a5.5 5.5 0 1 0 0-11 5.5 5.5 0 0 0 0 11zM13 6.5a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0z"
             />
           </svg>
-          <Form inline>
-            <FormControl type="text" placeholder="Search" className="mr-sm-2" />
-            <Button variant="outline-danger">Search</Button>
-          </Form>
+          <SearchBar
+            onKeyDown={this.props.onKeyDown}
+            onChange={this.props.onChange}
+          />
         </div>
       </Navbar>
     )
