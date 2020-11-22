@@ -7,7 +7,7 @@ const Results = (props) => {
     <Row style={{margin: 2 + "vw"}}>
       {props.results.map((res) => (
         
-        <Col xs={2} >
+        <Col xs={2} key={res.imdbID}>
           <img src={res.Poster}  style={{objectFit: "cover", width: 100 + "%", height: "auto", margin : 1 + "vw"}} />
          
             </Col>
