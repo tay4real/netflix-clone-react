@@ -1,11 +1,11 @@
 import React from "react"
-import "bootstrap/dist/css/bootstrap.min.css"
+
 
 import "../netflix.css"
 import Logo from "../assets/netflix-logo-png-2562.png"
 import SearchBar from "./SearchBar"
 
-import { Navbar, Button, Form, FormControl } from "react-bootstrap" //why do I need to import all of them?
+import { Navbar } from "react-bootstrap" //why do I need to import all of them?
 
 class NetflixNavBar extends React.Component {
   render() {
