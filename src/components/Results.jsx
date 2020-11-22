@@ -1,12 +1,20 @@
 import React from "react"
-import {Row, Col} from "react-bootstrap"
+import {Row, Col, Card} from "react-bootstrap"
 
 const Results = (props) => {
   return (
     <Row>
-      <Col>
-        <span>{props.results}</span>
-      </Col>
+      {props.results.map((res) => (
+        <Col>
+          <Card style={{width: "12 em"}}>
+            <Card.Img variant="top" src={res.Poster} />
+            <Card.Body>
+              <Card.Title>{res.Title}</Card.Title>
+              <Card.Text>{res.Year}</Card.Text>
+            </Card.Body>
+          </Card>
+        </Col>
+      ))}
     </Row>
   )
 }

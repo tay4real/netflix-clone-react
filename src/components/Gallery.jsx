@@ -8,13 +8,11 @@ import {Carousel, Container, Row, Col} from "react-bootstrap"
 
 class Gallery extends React.Component {
   state = {
-    // src_: "", //Poster
-    // title: "", //Title
     movies: [], //array of objects
   }
 
   componentDidMount = async () => {
-    let query = "harry potter"
+    let query = this.props.saga
     await this.getMovies(query)
     console.log(this.state.movies)
   }
@@ -29,14 +27,11 @@ class Gallery extends React.Component {
 
     if (response.ok) {
       let result = await response.json() //search object
-
       console.log(result)
       this.setState({movies: result.Search})
     } else {
       alert("something went wrong")
     }
-
-    // this.setState({src_: result.Poster, title: result.Title})
   }
 
   render() {

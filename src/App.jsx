@@ -9,7 +9,7 @@ import Gallery from "./components/Gallery"
 
 class App extends React.Component {
   state = {
-    res_: "",
+    movies: [],
   }
 
   onChange = (e) => {
@@ -18,13 +18,13 @@ class App extends React.Component {
   }
   fetchMovies = async (query) => {
     let response = await fetch(
-      `http://www.omdbapi.com/?t=${query}&apikey=a0871843&`
+      `http://www.omdbapi.com/?apikey=a0871843&s=${query}`
     )
     let result = await response.json()
     console.log(result)
-    let res = await result.Title
+    let res = await result
     console.log(res)
-    this.setState({res_: res})
+    this.setState({movies: res.Search})
   }
 
   onKeyDown = (e) => {
@@ -41,11 +41,11 @@ class App extends React.Component {
         {" "}
         <NetflixNavBar onKeyDown={this.onKeyDown} onChange={this.onChange} />
         {/* <Header /> */}
-        <Results results={this.state.res_} />
+        <Results results={this.state.movies} />
         {/* <CommentList /> */}
-        <Gallery />
-        {/* <Gallery />
-        <Gallery /> */}
+        <Gallery saga="Harry Potter" />
+        <Gallery saga="Lord of the Rings" />
+        <Gallery saga="Star Wars" />
       </>
     )
   }
