@@ -1,8 +1,3 @@
-// -Create, using components, the several "galleries" for the movies (at
-//     least 3 galleries with 3 sagas you like (es.: Harry Potter, Lord of the
-
-//this component fetches movies according to a query, then displays them, there will be several instances
-
 import React from "react"
 import {Carousel, Container, Row, Col} from "react-bootstrap"
 
