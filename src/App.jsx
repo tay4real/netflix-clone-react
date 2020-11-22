@@ -40,7 +40,7 @@ class App extends React.Component {
       <>
         {" "}
         <NetflixNavBar onKeyDown={this.onKeyDown} onChange={this.onChange} />
-        {/* <Header /> */}
+        {<Header /> }
         <Results results={this.state.movies} />
         {/* <CommentList /> */}
         <Gallery saga="Harry Potter" />
