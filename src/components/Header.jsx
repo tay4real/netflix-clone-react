@@ -1,6 +1,6 @@
 import React from "react"
 import { useState } from "react";
-import 'bootstrap/dist/css/bootstrap.min.css';
+
 import { Col, Modal, Row } from "react-bootstrap"
 import "../netflix.css"
 import video from "../assets/lietomecut.mp4"
