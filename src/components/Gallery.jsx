@@ -1,5 +1,5 @@
 import React from "react"
-import {Carousel, Col, Row} from "react-bootstrap"
+import {Carousel, Col} from "react-bootstrap"
 
 class Gallery extends React.Component {
   state = {
