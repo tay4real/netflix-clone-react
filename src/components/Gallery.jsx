@@ -35,14 +35,14 @@ class Gallery extends React.Component {
             <Carousel >
             
               {this.state.movies.map((movie) => (
-                <Carousel.Item>
+                <Carousel.Item key={movie.imdbID}>
                   <img
                     className="d-block w-100"
                     style={{objectFit:"cover", width: 20 + "vw", height: 35 + "vw", objectPosition: "top"}}
                     src={movie.Poster}
                     alt="First slide"
                   />
-                  <Carousel.Caption style={{width: 20 + + "vw",background: "rgb(255,255,255)",
+                  <Carousel.Caption style={{width: 20 + "vw",
 background: "linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(0,0,0,1) 80%)", position: "relative", left: "0", bottom: 6 + "vw"}}>
                     <h3 style={{overflow: "hidden", whiteSpace:"nowrap", textOverflow:"ellipsis"}}>{movie.Title}</h3>
                     <p>{movie.Year} </p>
