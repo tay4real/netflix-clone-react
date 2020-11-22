@@ -5,6 +5,7 @@ import Header from "./components/Header"
 import Results from "./components/Results"
 import NetflixNavBar from "./components/Navbar"
 import {render} from "@testing-library/react"
+import Gallery from "./components/Gallery"
 
 class App extends React.Component {
   state = {
@@ -20,6 +21,7 @@ class App extends React.Component {
       `http://www.omdbapi.com/?t=${query}&apikey=a0871843&`
     )
     let result = await response.json()
+    console.log(result)
     let res = await result.Title
     console.log(res)
     this.setState({res_: res})
@@ -38,9 +40,12 @@ class App extends React.Component {
       <>
         {" "}
         <NetflixNavBar onKeyDown={this.onKeyDown} onChange={this.onChange} />
-        <Header />
+        {/* <Header /> */}
         <Results results={this.state.res_} />
-        <CommentList />
+        {/* <CommentList /> */}
+        <Gallery />
+        {/* <Gallery />
+        <Gallery /> */}
       </>
     )
   }
