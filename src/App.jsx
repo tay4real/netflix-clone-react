@@ -7,10 +7,12 @@ import Results from "./components/Results"
 import NetflixNavBar from "./components/Navbar"
 import {render} from "@testing-library/react"
 import Gallery from "./components/Gallery"
+import {Container, Row} from "react-bootstrap"
 
 class App extends React.Component {
   state = {
     movies: [],
+    
   }
 
   onChange = (e) => {
@@ -36,20 +38,29 @@ class App extends React.Component {
     }
   }
 
+  
+
   render() {
+    
+   
     return (
       <>
         {" "}
         <NetflixNavBar onKeyDown={this.onKeyDown} onChange={this.onChange} />
-        {/* <Header /> */}
-        <Results results={this.state.movies} />
-        {/* <CommentList /> */}
-        <Gallery saga="Harry Potter" />
+       <Header/>
+     
+        <CommentList />
+     <Container>
+     <h1 style={{position: "relative", top: 90 + "vh"}}>Most popular sagas:</h1> 
+     <Row style={{height: 60 + "vh", position: "relative", top: 90 + "vh"}}> 
+     <Gallery saga="Harry Potter" />
         <Gallery saga="Lord of the Rings" />
-        <Gallery saga="Star Wars" />
+        <Gallery saga="Star Wars" /></Row></Container>
+        <Row style={{position: "relative", top: 100 + "vh"}}>
+          <h1 style={{marginLeft: 6 + "vw"}}>Search Results:</h1>
+       <Results results={this.state.movies} /></Row>
       </>
     )
   }
 }
-
 export default App

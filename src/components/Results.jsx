@@ -3,17 +3,15 @@ import {Row, Col, Card} from "react-bootstrap"
 
 const Results = (props) => {
   return (
-    <Row>
+    
+    <Row style={{margin: 2 + "vw"}}>
       {props.results.map((res) => (
-        <Col>
-          <Card style={{width: "12 em"}}>
-            <Card.Img variant="top" src={res.Poster} />
-            <Card.Body>
-              <Card.Title>{res.Title}</Card.Title>
-              <Card.Text>{res.Year}</Card.Text>
-            </Card.Body>
-          </Card>
-        </Col>
+        
+        <Col xs={2} >
+          <img src={res.Poster}  style={{objectFit: "cover", width: 100 + "%", height: "auto", margin : 1 + "vw"}} />
+         
+            </Col>
+     
       ))}
     </Row>
   )

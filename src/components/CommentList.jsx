@@ -30,18 +30,34 @@ function CommentList(props) {
           headers: {
             Authorization:
               "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZmI2ZDI4MTk4MzViMDAwMTc1ODRmYjYiLCJpYXQiOjE2MDU4MTY5NjEsImV4cCI6MTYwNzAyNjU2MX0.GqpTeLvk8Z8aMgxS8ZmTrQLFMDzjQ1FT-s1F39SH75I",
-          },
+              "Content-Type": "application/json"
+            },
         }
       )
       let comments = response.json()
-      if (comments.ok) {
-        console.log(comments)
-      }
+      
+    } catch (error) {
+      console.log(error)
+    }
+    try {
+      let commlist = await fetch(
+        "https://striveschool-api.herokuapp.com/api/comments/",
+        {
+          method: "GET",
+          headers: {
+            Authorization:
+              "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZmI2ZDI4MTk4MzViMDAwMTc1ODRmYjYiLCJpYXQiOjE2MDU4MTY5NjEsImV4cCI6MTYwNzAyNjU2MX0.GqpTeLvk8Z8aMgxS8ZmTrQLFMDzjQ1FT-s1F39SH75I",
+            },
+        }
+      )
+      let list = commlist.json()
+      console.log(list)
+      
     } catch (error) {
       console.log(error)
     }
   }
-
+  
   return (
     <Modal
       size={props.size}

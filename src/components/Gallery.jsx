@@ -1,5 +1,5 @@
 import React from "react"
-import {Carousel, Container, Row, Col} from "react-bootstrap"
+import {Carousel, Col, Row} from "react-bootstrap"
 
 class Gallery extends React.Component {
   state = {
@@ -31,27 +31,26 @@ class Gallery extends React.Component {
 
   render() {
     return (
-      <Container>
-        <Row>
-          <Col>
-            <Carousel>
+        <Col xs="4" >
+            <Carousel >
+            
               {this.state.movies.map((movie) => (
                 <Carousel.Item>
                   <img
-                    className="d-block w-25"
+                    className="d-block w-100"
+                    style={{objectFit:"cover", width: 20 + "vw", height: 35 + "vw", objectPosition: "top"}}
                     src={movie.Poster}
                     alt="First slide"
                   />
-                  <Carousel.Caption>
-                    <h3>{movie.Title}</h3>
+                  <Carousel.Caption style={{width: 20 + + "vw",background: "rgb(255,255,255)",
+background: "linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(0,0,0,1) 80%)", position: "relative", left: "0", bottom: 6 + "vw"}}>
+                    <h3 style={{overflow: "hidden", whiteSpace:"nowrap", textOverflow:"ellipsis"}}>{movie.Title}</h3>
                     <p>{movie.Year} </p>
                   </Carousel.Caption>
                 </Carousel.Item>
               ))}
             </Carousel>
           </Col>
-        </Row>
-      </Container>
     )
   }
 }
