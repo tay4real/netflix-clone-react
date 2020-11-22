@@ -151,3 +151,7 @@ body {
 .btn-group {
     top: -.5vw;
 }
+
+.modal-content {
+    background-color: #141414 !important;
+}
