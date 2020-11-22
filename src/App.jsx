@@ -5,7 +5,7 @@ import CommentList from "./components/CommentList"
 import Header from "./components/Header"
 import Results from "./components/Results"
 import NetflixNavBar from "./components/Navbar"
-import {render} from "@testing-library/react"
+
 import Gallery from "./components/Gallery"
 import {Container, Row} from "react-bootstrap"
 
@@ -18,6 +18,7 @@ class App extends React.Component {
   onChange = (e) => {
     // when valuechanged
     console.log(e.target.value)
+  
   }
   fetchMovies = async (query) => {
     let response = await fetch(
